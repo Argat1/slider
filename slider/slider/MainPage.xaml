@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="slider.MainPage">
+
+    <StackLayout>
+        <CarouselView x:Name="imageCarousel">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid>
+                            <Image Source="{Binding ImageSource}" HeightRequest="500" Aspect="AspectFit"
+                                   Margin="20"/>
+                        </Grid>
+                        <Frame Padding="0">
+                            <Button Text="Delete Image" Clicked="DeleteImage"/>
+                        </Frame>
+
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <!--<Button x:Name="toggleButton" Text="Stop Auto Slide" Clicked="OnToggleButtonClicked"/>-->
+        <Button Text="Your gallery" Clicked="GoToYourGallery"/>
+    </StackLayout>
+</ContentPage>
