@@ -21,7 +21,6 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
 
-        <!--<Button x:Name="toggleButton" Text="Stop Auto Slide" Clicked="OnToggleButtonClicked"/>-->
-        <Button Text="Your gallery" Clicked="GoToYourGallery"/>
+        
     </StackLayout>
 </ContentPage>

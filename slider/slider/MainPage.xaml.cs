@@ -41,23 +41,7 @@ namespace slider
             imageCarousel.ItemsSource = imagesList;
         }
 
-        private async void GoToYourGallery(object sender, EventArgs e)
-        {
-            try
-            {
-                var photo = await MediaPicker.PickPhotoAsync();
-
-                if (photo != null)
-                {
-                    await Navigation.PushAsync(new EditImagePage(photo.FullPath));
-                }
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Błąd", $"Wystąpił błąd: {ex.Message}", "OK");
-            }
-        }
-
+        
         private void DeleteImage(object sender, EventArgs e)
         {
             var button = sender as Button;
